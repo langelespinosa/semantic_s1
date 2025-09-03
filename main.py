@@ -93,7 +93,7 @@ for i, alias in enumerate(aliases):
     id_map_aliases[i] = alias["id"]
 
 print("🔄 Generando embeddings...")
-model = SentenceTransformer('multi-qa-distilbert-cos-v1')
+model = SentenceTransformer('paraphrase-albert-small-v2')
 
 embeddings_users = model.encode(corpus_users, normalize_embeddings=True)
 index_users = faiss.IndexFlatIP(embeddings_users.shape[1])
