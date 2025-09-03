@@ -9,7 +9,7 @@ startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
 envVars:
 
 key: MASTER_KEY
-value: "YOUR_MASTER_KEY_HERE" # Reemplaza con tu clave
+value: "_-QaL0mUbTpt5BMXRmJFlWxXjx52uc_SaSZUEdngl04" # Reemplaza con tu clave
 
 key: DB_HOST
 value: "db4free.net"
