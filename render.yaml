@@ -1,0 +1,27 @@
+services:
+
+type: web
+name: fastapi-microservice
+plan: free
+rootDir: .
+buildCommand: pip install -r requirements.txt
+startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+envVars:
+
+key: MASTER_KEY
+value: "YOUR_MASTER_KEY_HERE" # Reemplaza con tu clave
+
+key: DB_HOST
+value: "db4free.net"
+
+key: DB_USER
+value: "practice"
+
+key: DB_PASSWORD
+value: "BAg0T?@EspLj" # Considera usar un Secret Group
+
+key: DB_DATABASE
+value: "email_practice"
+
+key: DB_PORT
+value: "3306"
