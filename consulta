@@ -1,0 +1,24 @@
+            SELECT    
+                p.id, 
+                p.id_categoria AS padre_categoria,    
+                p.id_marca AS marca,
+                p.nombre,
+                p.variantes,    
+                p.descripcion,    
+                
+                v.id AS id_catalogo,
+
+                c.slug AS slug_categoria, 
+                        
+                m.slug AS slug_marca
+                
+                FROM 
+                    tienda_catalogoproductopadre p
+                LEFT JOIN tienda_catalogoproductos v 
+                    ON v.id_padre = p.id       
+                LEFT JOIN tienda_categoriasproductos c         
+                    ON c.id = p.id_categoria   
+                LEFT JOIN tienda_marcas m 
+                    ON m.id = p.id_marca
+                
+            WHERE p.activo='1' LIMIT 100;
